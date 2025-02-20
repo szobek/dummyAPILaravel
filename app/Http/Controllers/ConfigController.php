@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Config;
 
 class ConfigController extends Controller
 {
-    //
+    public function getConfig()
+    {
+        $data = Config::first();
+        return $data; 
+    }
+
 }
